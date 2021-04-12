@@ -1,2 +1,2 @@
 #! /usr/bin/gawk -f
-/,131,/ {print $0}
+$8==131 {print $0}
