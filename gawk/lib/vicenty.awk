@@ -2,7 +2,7 @@
 @include "functions"
 BEGIN {distance=100; stopLatitude=3.473625; stopLongitude=-76.50695};
 {
-  if($8 ~ /131/ && abs($5) > 1 && abs($6) > 1)
+  if($8 ~ /131/)
   latitude=($5)/10000000 
   longitude=($6)/10000000
   distanceInMeters=vicenty(latitude,longitude,stopLatitude,stopLongitude)*1000

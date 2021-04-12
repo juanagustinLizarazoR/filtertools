@@ -1,6 +1,6 @@
 #! /usr/bin/gawk -f
 @include "functions"
-BEGIN {earthRadius=6378; pi=computedPi(); stopLatitude=toRadians(3.473625); stopLongitude=toRadians(-76.50695); distance=10 };
+BEGIN {earthRadius=6378; pi=computedPi(); stopLatitude=toRadians(3.473625); stopLongitude=toRadians(-76.50695); distance=2 };
 {
   if($8 ~ /131/)
   latitude=(toRadians($5))/10000000 

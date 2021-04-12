@@ -39,7 +39,7 @@ function vicenty(latitude,longitude,stopLatitude,stopLongitude){
   cosU1=cos(U1)
   sinU2=sin(U2)
   cosU2=cos(U2)
-  iterLimit=100000
+  iterLimit=100
   do {
     sinLambda=sin(lambda)
     cosLambda=cos(lambda)
