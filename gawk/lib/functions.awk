@@ -9,7 +9,7 @@ function computedPi(){
   return atan2(0,-1);
 }
 function toRadians(degree){
-  return degree*(pi/180);
+  return degree*(computedPi()/180);
 }
 function tan(x){
   return sin(x)/cos(x);
@@ -29,6 +29,9 @@ function haversine(latitude,longitude,stopLatitude,stopLongitude){
   return distanceInMeters;
 }
 function vicenty(latitude,longitude,stopLatitude,stopLongitude){
+  a = 6378137
+  b = 6356752.314245
+  f =1/298.257223563
   lambda=toRadians(stopLongitude-longitude)
   U1=atan((1-f)*tan(toRadians(stopLatitude)))
   U2=atan((1-f)*tan(toRadians(latitude)))
@@ -36,7 +39,7 @@ function vicenty(latitude,longitude,stopLatitude,stopLongitude){
   cosU1=cos(U1)
   sinU2=sin(U2)
   cosU2=cos(U2)
-  iterLimit=100
+  iterLimit=100000
   do {
     sinLambda=sin(lambda)
     cosLambda=cos(lambda)
