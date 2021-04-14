@@ -59,6 +59,6 @@ function vicenty(latitude,longitude,stopLatitude,stopLongitude){
     A = 1 + uSq / 16384 * (4096 + uSq * (-768 + uSq * (320 - 175 * uSq)));
     B = uSq / 1024 * (256 + uSq * (-128 + uSq * (74 - 47 * uSq)));
     deltaSigma = B * sinSigma * (cos2SigmaM + B / 4 * (cosSigma * (-1 + 2 * cos2SigmaM * cos2SigmaM) - B / 6 * cos2SigmaM * (-3 + 4 * sinSigma * sinSigma) * (-3 + 4 * cos2SigmaM * cos2SigmaM)));
-    s = b * A * (sigma - deltaSigma);
+    s = b * A * (sigma - deltaSigma)
     return s;
   }
